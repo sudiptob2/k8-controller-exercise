@@ -1,0 +1,15 @@
+apiVersion: scaler.sudiptob2.github.io/v1alpha1
+kind: AutoScaler
+metadata:
+  labels:
+    app.kubernetes.io/name: autoscaler
+    app.kubernetes.io/instance: autoscaler-sample
+    app.kubernetes.io/part-of: autoscaler-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: autoscaler-operator
+  name: autoscaler-sample
+spec:
+  name: my-booking-app # name of the deployment to monitor
+  startTime: 17
+  endTime: 18
+  replicas: 4
